@@ -56,3 +56,9 @@ const member_3 = {
     '2kumi':{}
 };
 console.log(member_3['1kumi']['本田']['hobby']);
+
+//演算子
+const test_1 = 4;
+const test_2 = 3;
+const test_3 = test_1 + test_2;
+console.log(test_3);
