@@ -62,3 +62,27 @@ const test_1 = 4;
 const test_2 = 3;
 const test_3 = test_1 + test_2;
 console.log(test_3);
+
+//if文
+const height = 91;
+console.log(typeof height);
+if(height === 90) {
+    console.log('伸長は' + height +'cmです');
+} else {
+    console.log('伸長は90cmではありません');
+}
+
+// == 一致
+// === 型も一致
+// !== 型も判定。基本的に!==を使う。
+
+const signal_1 = 'red';
+const signal_2 = 'blue';
+if(signal_1 === 'red' && signal_2 === 'blue') {
+    console.log('赤と青');
+}
+
+//三項演算子
+const score = 80;
+const comment = score > 80 ? 'good'  : 'not good' ;
+console.log(comment);
