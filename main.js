@@ -86,3 +86,13 @@ if(signal_1 === 'red' && signal_2 === 'blue') {
 const score = 80;
 const comment = score > 80 ? 'good'  : 'not good' ;
 console.log(comment);
+
+//繰り返し
+//for
+//for in あまり使われない
+//for of
+
+const scores = [10,20,30];
+    for( s of scores ) {
+    console.log(s);
+}
