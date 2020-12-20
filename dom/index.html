@@ -16,41 +16,33 @@
     </style>
 </head>
 <body>
-<!-- <div id="test">
-    <ul>
-        <li class="test_List blue">テスト1</li>
-        <li class="test_List">テスト2</li>
-        <li class="test_List">テスト3</li>
-    </ul>
-</div> -->
-<input id="test" placeholder="あああ">あああ</input>
-<!-- attribute（属性を追加できる） -->
-
+<div id="grand-father">
+    <div id="parent">
+        <div id="target">
+            自分
+        </div>
+    </div>
+    <div id="divList">
+        <div class="div1">テスト１</div>
+        <div class="div2">テスト２</div>
+        <div class="div3">テスト３</div>
+    </div>
+</div>
 <script>
-    const input = document.getElementById('test');
-    input.type = 'text';
-    input.placeHolder= 'あああ';
-    input.name='test';
-    input.textContent = 'テストです';
-    // input.setAttribute('type','text');
-    console.log(input);
-    const anchor = document.createElement('a');
-    anchor.href = 'https://google.com';
-    anchor.target= '_blank';
-    console.log(anchor);
+    const target = document.getElementById('target');
+    const newDiv = document.createElement('div');
+    newDiv.id = 'test';
+    newDiv.classList.add('red');
+    newDiv.textContent = 'テストです';
+    // target.appendChild(newDiv);
+    target.parentNode.appendChild(newDiv);
 
-    const test = document.getElementById('test').classList.add('red');
-    
-    // const test = document.getElementById('test');
-    // test.classList.add('red');
-
-
-    // const testList = document.querySelector('#test');
-    // const testLists = document.querySelectorAll('.test_List');
-    // testList.classList.remove('blue');
-    // console.log(test);
-    // console.log(testList);
-    // console.log(testLists);
+    const targetList = document.getElementById('divList');
+    const newDivSample = document.createElement('div');
+    const reference = document.querySelector('.div2');
+    newDivSample.id = 'sample1';
+    newDivSample.textContent = 'テストです';
+    targetList.insertBefore(newDivSample,reference);
 
 </script>
 </body>
