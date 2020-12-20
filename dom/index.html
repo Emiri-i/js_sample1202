@@ -6,23 +6,51 @@
     <!-- viewportはスマホで画面いっぱいに表示する対応 -->
     <title>Document</title>
     <link rel="stylesheet" href="app.css">
-
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-<div id="test">
+<!-- <div id="test">
     <ul>
-        <li class="test_List">テスト1</li>
+        <li class="test_List blue">テスト1</li>
         <li class="test_List">テスト2</li>
         <li class="test_List">テスト3</li>
     </ul>
-</div>
+</div> -->
+<input id="test" placeholder="あああ">あああ</input>
+<!-- attribute（属性を追加できる） -->
+
 <script>
-    const test = document.getElementById('test');
-    const testList = document.querySelector('#test');
-    const testLists = document.querySelectorAll('.test_List');
-    console.log(test);
-    console.log(testList);
-    console.log(testLists);
+    const input = document.getElementById('test');
+    input.type = 'text';
+    input.placeHolder= 'あああ';
+    input.name='test';
+    input.textContent = 'テストです';
+    // input.setAttribute('type','text');
+    console.log(input);
+    const anchor = document.createElement('a');
+    anchor.href = 'https://google.com';
+    anchor.target= '_blank';
+    console.log(anchor);
+
+    const test = document.getElementById('test').classList.add('red');
+    
+    // const test = document.getElementById('test');
+    // test.classList.add('red');
+
+
+    // const testList = document.querySelector('#test');
+    // const testLists = document.querySelectorAll('.test_List');
+    // testList.classList.remove('blue');
+    // console.log(test);
+    // console.log(testList);
+    // console.log(testLists);
 
 </script>
 </body>
