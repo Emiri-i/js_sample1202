@@ -1,3 +1,4 @@
+'use strict'
 const postal = {
 
    postalcode:'123-4567',
