@@ -16,7 +16,37 @@
     </style>
 </head>
 <body>
-<div id="grand-father">
+
+<div id="test"></div>
+    <!-- <button id="target" onclick="change_color()">押してね</button> -->
+    <button id="target">押してね</button>
+<script>
+    // 1つめ HTMLタグにonclickと設定する
+    // function change_color() {
+    //     const test1 = document.getElementById('test');
+    //     test1.textContent= 'テスト';
+    //     test1.classList.add('red');
+    // }
+
+    // 2つめ　JSで設定　Element.onclick
+    // document.getElementById("target").onclick = function() {
+    //     const test1 = document.getElementById('test');
+    //     test1.textContent= 'テスト';
+    //     test1.classList.add('red');
+    // }
+
+    //3つめ イベントリスナー
+    const target = document.getElementById('target');
+    target.addEventListener('click', (e) => {
+        console.log(e);
+        const test1 = document.getElementById('test');
+        test1.textContent= 'テスト';
+        test1.classList.add('red');
+    })
+
+</script>
+
+<!-- <div id="grand-father">
     <div id="parent">
         <div id="target">
             自分
@@ -44,6 +74,6 @@
     newDivSample.textContent = 'テストです';
     targetList.insertBefore(newDivSample,reference);
 
-</script>
+</script> -->
 </body>
 </html>
