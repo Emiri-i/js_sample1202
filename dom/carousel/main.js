@@ -1,5 +1,8 @@
 'use strict';
 
+(function immediate(){
+    console.log('即時関数です');
+})();
 const images = [
     'images/image000.jpg',
     'images/image001.jpg',
