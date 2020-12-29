@@ -1,5 +1,14 @@
 'use strict';
 
+window.addEventListener('load', () => {
+    setInterval(() => {
+        let target = currentIndex + 1;
+        if(target === images.length) {
+            target = 0;
+        }
+        document.querySelectorAll('.carousel__thumbnails > li')[target].click();
+    },1000 * 2);
+});
 (function immediate(){
     console.log('即時関数です');
 })();
